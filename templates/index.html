@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ info.name }} - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>{{ info.name }}</h1>
+        <p class="title">{{ info.title }}</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>{{ info.about }}</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in info.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        {% for project in info.projects %}
+            <div class="project-card">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.desc }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        <a href="/contact">Contact Me</a>
+    </footer>
+
+</body>
+</html>
