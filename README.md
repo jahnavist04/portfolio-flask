@@ -16,3 +16,21 @@ A personal portfolio website built with Flask, showcasing my info, skills, proje
 - Flask routing for multiple pages
 
 ## Project Structure
+portfolio-flask/
+├── app.py
+├── templates/
+│   ├── index.html
+│   └── contact.html
+├── static/
+│   └── style.css
+└── README.md
+
+## How to Run
+```bash
+pip install flask
+python app.py
+```
+Then open http://127.0.0.1:5000/ in your browser.
+
+## Key Concepts
+Flask routing, Jinja2 templating, render_template(), static files, HTML forms, GET vs POST.
